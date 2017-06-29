@@ -9,7 +9,7 @@ def resource_class
 
 def resource
   @resource ||= User.new
- end
+end
 
 def devise_mapping
   @devise_mapping ||= Devise.mappings[:user]
