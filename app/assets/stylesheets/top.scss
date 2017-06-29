@@ -1,0 +1,164 @@
+body{
+  background-color: #fafafa;
+}
+
+.wrap{
+  margin:30px auto 0;
+  max-width: 935px;
+  width: 100%;
+}
+
+.mockup{
+    align-self: center;
+    background-size: 454px 600px;
+    background-image: url("iphone.png");
+    background-repeat: no-repeat;
+    flex-basis: 454px;
+    height: 600px;
+}
+
+.img_position{
+  display: block;
+  margin: 100px 0 0 157px;
+  width: 230px;
+  height: 99px;
+  top: 0;
+  position: absolute;
+}
+
+.form_wrap{
+  margin: 12px auto 0;
+  max-width: 350px;
+}
+
+.signup{
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  margin: 0 0 10px;
+}
+
+.signup li{
+  list-style: none;
+}
+
+.logo{
+  margin: 22px auto 8px;
+  background-image: url("logo.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  height: 51px;
+  width: 175px;
+}
+
+.logo h1{
+  display: none;
+}
+
+h2,.input p{
+  text-align: center;
+  color: #999;
+  font-weight: 600;
+}
+.form{
+  padding: 20px;
+}
+
+.form h2{
+  font-size: 17px;
+  line-height: 20px;
+  margin:0 40px 10px;
+}
+
+.input{
+  margin: 30px 40px 18px;
+}
+
+.input p{
+  border-top: 1px solid #c7c7c7;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 10px 18px 12px;
+}
+
+.input p span{
+  background-color: #fff;
+  position: relative;
+  padding:10px;
+  top: -8px;
+}
+
+/*ログイン機能を確認*/
+
+.pp{
+  color:#999;
+  margin: 10px 60px;
+}
+
+.account{
+  color: #262626;
+  font-size: 14px;
+  margin: 15px;
+  text-align: center;
+}
+
+.navbar-default {
+    border: 0;
+    padding: 0 20px;
+}
+.navbar {
+    background-color: transparent;
+    color: #003569;
+    margin-bottom: 0px;
+}
+.navbar-default {
+  .navbar-brand {
+    color: #003569;
+    &:hover {
+      color: #ccc;
+    }
+  }
+  .navbar-nav > li > a {
+    color: #003569;
+    &:hover, &:focus {
+      color: #ccc;
+    }
+  }
+  .copy{
+    float: right;
+    color: #ccc;
+    padding: 15px;
+  }
+}
+
+.flash{
+  color: #003569;
+  padding-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ccc;
+    text-align: center;
+    &:hover, &:focus {
+      color: #003569;
+    }
+  }
+  .navbar-default .navbar-toggle {
+    background-color: transparent;
+    &:hover, &:focus {
+      background-color: transparent;
+    }
+  }
+}
+
+footer{
+    width: 100%;
+    background-color: #fafafa;
+    height: 104px;
+}
+
+html{
+    position: relative;
+    min-height: 100%;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instaphotograph</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="app/assets/stylesheets/jquery.bxslider.css">
+  <script src="app/assets/javascripts/jquery.bxslider.min.js"></script>
+  <script>
+  $(function(){
+    $('.bxslider').bxSlider({
+      auto: true,
+      slideWidth: 230,
+      mode: 'fade',
+      pager: false
+    });
+  });
+  </script>
+</head>
+<body>
+
+<%= yield %>
+
+<footer>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to"INSRAGRAPH",root_path,class:"navbar-brand" %>
+    </div>
+
+      <ul class="nav navbar-nav navbar-left">
+        <li><%= link_to"pictures",pictures_path %></li>
+        <li><%= link_to"お問い合わせ",contacts_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to 'マイページ', edit_user_registration_path %></li>
+        <% else %>
+          <li><%= link_to 'ログイン', new_user_session_path %></li>
+          <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+        <% end %>
+      </ul>
+      <span class="copy">&copy; 2017 Instaphotograph</span>
+    </div>
+  </nav>
+</footer>
+
+</body>
+</html>
