@@ -43,10 +43,14 @@ class PicturesController < ApplicationController
     render :new if @picture.invalid?
   end
 
+  def complete
+    @picture.image.retrieve_from_cache! params[:cache][:image]
+    @picture.save!
+  end
 
   private
   def pictures_params
-    params.require(:picture).permit(:title,:content,:image)
+    params.require(:picture).permit(:title,:content, :image, :image_cache)
   end
 
   def set_picture
