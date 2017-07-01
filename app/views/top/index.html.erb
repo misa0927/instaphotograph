@@ -1,8 +1,8 @@
 <section>
   <article class="wrap">
     <p class="flash"><%= notice %><%= alert %></p>
-    <!-- iphone_image -->
-    <section class="container-fluid">
+
+    <div class="container-fluid">
         <div class="row">
           <div class="col-sm-6 hidden-xs">
           <div class="mockup">
@@ -18,40 +18,36 @@
           </div>
         </div>
 
-    <!-- signup_form -->
         <div class="col-sm-6">
-          <section class="form_wrap">
+          <div class="form_wrap">
             <div class="signup">
               <div class="logo">
                 <h1>Instagraph</h1>
               </div>
               <div class="form">
                 <h2>写真を投稿してみよう</h2>
-              <!-- facebook_button あとでパス変更-->
-                <div><%= link_to"Facebookでログイン",pictures_path,class: 'btn btn-primary btn-block'  %></div>
 
-                <div class="input">
-                  <p><span>または</span></p>
-                </div>
+                <div><%= link_to"SNSでログイン",new_user_session_path,class: 'btn btn-primary btn-block'  %></div>
+                  <div class="input">
+                    <p><span>または</span></p>
+                  </div>
 
-                <%= render'form' %>
+                  <%= render'form' %>
 
-              <!-- privacypolicy -->
-                <p class="pp">登録することで、利用規約とプライバシーポリシーに同意するものとします。</p>
+                  <p class="pp">登録することで、利用規約とプライバシーポリシーに同意するものとします。</p>
               </div>
-            </div><!-- singup -->
+            </div>
 
-            <!-- login -->
             <div class="signup">
               <% if user_signed_in? %>
-              <li><p class="account"><%= link_to 'ログアウトする',destroy_user_session_path, method: :delete %></p></li>
+                <li><p class="account"><%= link_to 'ログアウトする',destroy_user_session_path, method: :delete %></p></li>
               <% else %>
-              <li><p class="account">アカウントをお持ちですか？<%=link_to'ログインする', new_user_session_path %></p></li>
+                <li><p class="account">アカウントをお持ちですか？<%=link_to'ログインする', new_user_session_path %></p></li>
               <% end %>
             </div>
-          </section><!-- form_wrap -->
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   </article>
 </section>
