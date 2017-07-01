@@ -11,7 +11,7 @@
             <h4><strong>title:<%= picture.title %></strong></h4>
             <p>content:<%= picture.content %></p>
               <%if picture.image? %>
-              <%= image_tag (@picture.image.url) %>
+              <%= image_tag(picture.image) %>
               <% else %>
               <%= image_tag 'no_image.png' %>
               <% end %>

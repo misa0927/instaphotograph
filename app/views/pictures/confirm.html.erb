@@ -5,6 +5,7 @@
     <%= form_for(@picture) do |f| %>
     <%= f.hidden_field :title %>
     <%= f.hidden_field :content %>
+    <%= hidden_field_tag :"cache[image]",@picture.image.cache_name %>
 
     <p>title:<%= @picture.title %></p>
     <p>content:<%= @picture.content %></p>
@@ -15,7 +16,6 @@
     <%= form_for(@picture,url: new_picture_path,method:'get') do |f| %>
     <%= f.hidden_field :title %>
     <%= f.hidden_field :content %>
-    <%= hidden_field_tag :"cache[image]",@picture.image.cache_name %>
     <%= f.submit "戻る", name:'back', class:'btn btn-default btn-block' %>
     <% end %>
   </div>
