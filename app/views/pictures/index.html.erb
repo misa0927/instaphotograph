@@ -8,8 +8,8 @@
       <div class="row">
         <%= profile_img(picture.user) %>
           <p><%=picture.user.name %></p>
-            <h4><strong>title:<%= picture.title %></strong></h4>
-            <p>content:<%= picture.content %></p>
+            <h4><strong>タイトル:<%= picture.title %></strong></h4>
+            <p>内容:<%= picture.content %></p>
               <%if picture.image? %>
               <%= image_tag(picture.image) %>
               <% else %>
