@@ -11,6 +11,7 @@
 </div>
 <% end %>
 
+<<<<<<< HEAD
 <%= f.label :タイトル %>
 <%= f.text_field :title, class:'form-control' %>
 <br>
@@ -19,6 +20,16 @@
 <br>
 <div class="field">
     <%= f.label :写真 %><br>
+=======
+<%= f.label :"タイトル" %>
+<%= f.text_field :title, class:'form-control' %>
+<br>
+<%= f.label :"内容" %>
+<%= f.text_field :content, class:'form-control'%>
+<br>
+<div class="field">
+    <%= f.label :"写真" %><br>
+>>>>>>> f64674572c9b9998caaf609197b9cd9295c6187e
     <%= f.file_field :image %>
     <%= f.hidden_field :image_cache %>
 </div>
@@ -26,5 +37,9 @@
 
 <%= f.submit '投稿', class:'btn btn-primary btn-block' %>
 <br>
+<<<<<<< HEAD
 <%= f.submit"Picturesへ戻る",name: 'back', class:'btn btn-default btn-block' %>
+=======
+<%= f.submit"Picturesに戻る",name: 'back', class:'btn btn-default btn-block' %>
+>>>>>>> f64674572c9b9998caaf609197b9cd9295c6187e
 <% end %>
